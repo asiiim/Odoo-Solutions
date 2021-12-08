@@ -1,0 +1,10 @@
+1. How to revoke archive access to the certain users.
+    - Create an automated action
+    - Add domain "Active is set" in Before Update Domain.
+    - Add domain "Active is not set" in Apply on.
+    - Add following python code with Action To Do as "Execute Python Code"
+
+        if not env.user.has_group('base.group_erp_manager'):
+            raise Warning('You are not allowed to archive contact.')
+
+    - Here you can set any collection of security groups.
