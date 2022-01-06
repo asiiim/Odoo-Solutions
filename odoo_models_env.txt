@@ -1,0 +1,7 @@
+1. We can have similar operation as x += 5 for models env.
+    For example:
+        purchase_orders = self.env['purchase.order']
+
+        Then we can add other purchase order object like po_1 to purchase_orders as:
+
+        purchase_orders += po_1
